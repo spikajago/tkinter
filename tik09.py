@@ -1,6 +1,7 @@
 #Steven Pikajago IT-24
 #12.02.2025
 import tkinter as tk
+from tkinter import messagebox
 
 aken = tk.Tk()
 aken.title("Raadionuppude näide")
@@ -14,8 +15,8 @@ def show_selection():
         trans=3
     else:
         trans=0
-    summa=selected_color.get() + var1.get() + float(var2.get()) + var3.get() + trans
-    print(summa)
+    summa=selected_color.get()+ var1.get()+ float(var2.get())+ var3.get()+ trans
+    messagebox.showinfo("Sinu pitsa summa", str(summa)+"€")
 
 selected_color = tk.IntVar(value=5)
 
